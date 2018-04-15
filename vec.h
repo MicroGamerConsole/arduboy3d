@@ -1,6 +1,10 @@
 #ifndef VEC_H_
 #define VEC_H_
 
+int16_t __builtin_avr_fmuls(int8_t a, int8_t b)
+{
+  return ((int16_t)a * (int16_t)b) << 1;
+}
 struct Vec216 {
   int16_t x, y;
 

@@ -44,7 +44,7 @@ ISR(TIMER4_OVF_vect) {
 void setup() {
   // put your setup code here, to run once:
   arduboy_.begin();
-  screen_ = arduboy_.getBuffer();
+  arduboy_.enableDoubleBuffer();
   arduboy_.setFrameRate(60);
 
 #ifdef _PROFILE
@@ -261,6 +261,7 @@ void loop() {
     t0_ = micros();
   }
   if (arduboy_.nextFrame()) {
+    screen_ = arduboy_.getBuffer();
     stars_.Draw();
     ReadInput();
     DrawObject();
