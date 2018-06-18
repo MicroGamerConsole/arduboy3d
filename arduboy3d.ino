@@ -1,4 +1,4 @@
-#include <Arduboy2.h>
+#include <MicroGamer.h>
 #include <avr/pgmspace.h>
 #include "draw.h"
 #include "sincos.h"
@@ -6,7 +6,7 @@
 #include "teapot.h"
 // #include "icosahedron.h"
 
-Arduboy2 arduboy_;
+MicroGamer arduboy_;
 uint8_t *screen_;
 
 #ifdef _PROFILE
