@@ -98,7 +98,7 @@ void ReadInput() {
   static const int32_t kTurnSpeed = 1000;
   static bool manual_control = false;
 
-  if (arduboy_.pressed(A_BUTTON)) {
+  if (arduboy_.pressed(Y_BUTTON)) {
     if (arduboy_.pressed(LEFT_BUTTON)) {
       A_target -= kTurnSpeed;
       manual_control = true;
